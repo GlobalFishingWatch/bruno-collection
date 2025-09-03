@@ -1,0 +1,23 @@
+meta {
+  name: Search Panama
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{host}}/v1/vessels/advanced-search
+  body: json
+  auth: none
+}
+
+params:query {
+  datasets: panama-vessels:v20200331
+  limit: 20
+  offset: 0
+  query: shipname+LIKE+'%PEPE%'
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer {{token}}
+}

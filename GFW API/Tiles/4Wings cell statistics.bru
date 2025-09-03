@@ -1,0 +1,15 @@
+meta {
+  name: 4Wings cell statistics
+  type: http
+  seq: 13
+}
+
+get {
+  url: {{host}}/v1/4wings/interaction/4/7/5/99/28?date-range=2017-12-31T23:00:00.000Z,2018-12-31T23:00:00.000Z&datasets[0]=fishing_v4&datasets[1]=fishing_v4&filters[0]=flag IN ('FRA')
+  body: none
+  auth: none
+}
+
+headers {
+  Authorization: Bearer {{token}}
+}

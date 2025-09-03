@@ -1,0 +1,43 @@
+meta {
+  name: Create dataset
+  type: http
+  seq: 11
+}
+
+post {
+  url: {{host}}/v1/datasets
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer {{token}}
+}
+
+body:json {
+  {
+  	"alias": null,
+  	"id": "fishing-tracks:v20200507",
+  	"name": "fishing-tracks:v20200507",
+  	"type": "carriers-tracks:v1",
+  	"description": "Dataset with fishing tracks",
+  	"startDate": null,
+  	"endDate": null,
+  	"unit": null,
+  	"status": "done",
+  	"importLogs": null,
+  	"category": null,
+  	"subcategory": null,
+  	"source": null,
+  	"ownerId": 46,
+  	"ownerType": "user",
+  	"configuration": {
+  		"table": "tracks"
+  	},
+  	"createdAt": "2020-10-02T12:19:45.103Z",
+  	"relatedDatasets": null,
+  	"schema": null,
+  	"fieldsAllowed": null
+  }
+}

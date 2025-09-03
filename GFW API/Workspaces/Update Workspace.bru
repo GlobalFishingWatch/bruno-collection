@@ -1,0 +1,134 @@
+meta {
+  name: Update Workspace
+  type: http
+  seq: 9
+}
+
+patch {
+  url: {{host}}/v1/workspaces/caribe_1
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer {{token}}
+}
+
+body:json {
+  {
+    "dataviewInstances": [
+      {
+        "id": "basemap",
+        "dataviewId": 90
+      },
+      {
+        "id": "fishing-1",
+        "config": {
+          "datasets": [
+            "fishing_v5"
+          ]
+        },
+        "dataviewId": 91
+      },
+      {
+        "id": "fishing-2",
+        "config": {
+          "color": "#FF64CE",
+          "datasets": [
+            "chile-fishing:v20200331"
+          ],
+          "colorRamp": "magenta"
+        },
+        "deleted": true,
+        "dataviewId": 91,
+        "datasetsConfig": []
+      },
+      {
+        "id": "fishing-3",
+        "config": {
+          "color": "#9CA4FF",
+          "datasets": [
+            "indonesia-fishing:v20200320"
+          ],
+          "colorRamp": "lilac"
+        },
+        "deleted": true,
+        "dataviewId": 91,
+        "datasetsConfig": []
+      },
+      {
+        "id": "context-layer-eez",
+        "config": {
+          "color": "#069688",
+          "visible": false
+        },
+        "dataviewId": 94,
+        "datasetsConfig": []
+      },
+      {
+        "id": "context-layer-mpa",
+        "config": {
+          "color": "#1AFF6B",
+          "visible": true
+        },
+        "dataviewId": 98,
+        "datasetsConfig": []
+      },
+      {
+        "id": "context-layer-mpa-no-take",
+        "config": {
+          "color": "#F4511F",
+          "visible": false
+        },
+        "dataviewId": 99
+      },
+      {
+        "id": "context-layer-mpa-restricted",
+        "config": {
+          "color": "#F09300",
+          "visible": false
+        },
+        "dataviewId": 100
+      },
+      {
+        "id": "context-layer-rfmo",
+        "config": {
+          "color": "#6b67e5",
+          "visible": false
+        },
+        "dataviewId": 95
+      },
+      {
+        "id": "sea-surface-temp-caribe",
+        "config": {
+          "color": "#FF6854",
+          "visible": true,
+          "colorRamp": "red"
+        },
+        "dataviewId": 79,
+        "datasetsConfig": []
+      },
+      {
+        "id": "salinity-for-caribe",
+        "config": {
+          "color": "#9CA4FF",
+          "visible": true,
+          "colorRamp": "lilac"
+        },
+        "dataviewId": 80,
+        "datasetsConfig": []
+      },
+      {
+        "id": "chlorophyll-caribe",
+        "config": {
+          "color": "#FFEA00",
+          "visible": true,
+          "colorRamp": "yellow"
+        },
+        "dataviewId": 84,
+        "datasetsConfig": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+meta {
+  name: Search Chile
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{host}}/v1/vessels/advanced-search
+  body: json
+  auth: none
+}
+
+params:query {
+  datasets: peru-vessels:v20200324
+  limit: 20
+  offset: 0
+  query: shipname+LIKE+'%PEPE%'
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer {{token}}
+}

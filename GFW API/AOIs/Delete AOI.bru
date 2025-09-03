@@ -1,0 +1,16 @@
+meta {
+  name: Delete AOI
+  type: http
+  seq: 1
+}
+
+delete {
+  url: {{host}}/v1/aoi/6
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer {{token}}
+}

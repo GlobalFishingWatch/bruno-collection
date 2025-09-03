@@ -1,0 +1,16 @@
+meta {
+  name: Delete Dataview
+  type: http
+  seq: 8
+}
+
+delete {
+  url: {{host}}/v1/dataviews/117
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer {{token}}
+}

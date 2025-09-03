@@ -1,0 +1,15 @@
+meta {
+  name: Get workspace
+  type: http
+  seq: 10
+}
+
+get {
+  url: {{host}}/v1/workspaces/caribe_1
+  body: none
+  auth: none
+}
+
+headers {
+  Authorization: Bearer {{token}}
+}

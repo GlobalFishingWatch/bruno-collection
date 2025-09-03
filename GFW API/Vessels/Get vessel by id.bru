@@ -1,0 +1,16 @@
+meta {
+  name: Get vessel by id
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{ host }}/v1/vessels/00ba29183-3b86-9e36-cf20-ee340e409521?datasets=test-alias-import-vessels-pipeline:latest
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer {{token}}
+}

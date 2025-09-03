@@ -1,0 +1,15 @@
+meta {
+  name: User context layer
+  type: http
+  seq: 8
+}
+
+get {
+  url: https://gateway.api.dev.globalfishingwatch.org/v1/datasets/user-context-large/user-context-layer-v1/4/4/8
+  body: none
+  auth: none
+}
+
+headers {
+  Authorization: Bearer {{token}}
+}

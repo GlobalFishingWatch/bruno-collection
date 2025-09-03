@@ -1,0 +1,60 @@
+meta {
+  name: Create AOI
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{host}}/v1/aoi
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer {{token}}
+}
+
+body:json {
+  {
+  "id": 1,
+      "name": "Galapagos",
+      "createdAt": "2020-09-16T09:24:17.069Z",
+      "geometry": {
+        "type": "FeatureCollection",
+        "features": [
+          {
+            "type": "Feature",
+            "geometry": {
+              "type": "Polygon",
+              "coordinates": [
+                [
+                  [
+                    -98,
+                    -8
+                  ],
+                  [
+                    -80,
+                    -8
+                  ],
+                  [
+                    -80,
+                    8
+                  ],
+                  [
+                    -98,
+                    8
+                  ],
+                  [
+                    -98,
+                    -8
+                  ]
+                ]
+              ]
+            },
+            "properties": {}
+          }
+        ]
+      }
+  }
+}

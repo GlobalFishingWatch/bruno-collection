@@ -1,0 +1,122 @@
+meta {
+  name: Create dataview
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{host}}/v1/dataviews
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer {{token}}
+}
+
+body:json {
+  {
+    "name": "Default public tracks",
+    "description": "Default public tracks",
+    "app": "fishing-map",
+    "config": {
+      "type": "TRACK",
+      "color": "#F95E5E"
+    },
+    "infoConfig": {
+      "fields": [
+        {
+          "id": "flag",
+          "type": "flag"
+        },
+        {
+          "id": "imo",
+          "type": "number"
+        },
+        {
+          "id": "mmsi",
+          "type": "number"
+        },
+        {
+          "id": "callsign",
+          "type": "number"
+        },
+        {
+          "id": "registeredGearType",
+          "type": "string"
+        },
+        {
+          "id": "widthRange",
+          "type": "string"
+        },
+        {
+          "id": "lengthRange",
+          "type": "string"
+        },
+        {
+          "id": "grossTonnageRange",
+          "type": "string"
+        },
+        {
+          "id": "firstTransmissionDate",
+          "type": "date"
+        },
+        {
+          "id": "lastTransmissionDate",
+          "type": "date"
+        },
+        {
+          "id": "fleet",
+          "type": "fleet"
+        },
+        {
+          "id": "source",
+          "type": "string"
+        }
+      ]
+    },
+    "datasetsConfig": [
+      {
+        "query": [
+          {
+            "id": "binary",
+            "value": true
+          },
+          {
+            "id": "wrapLongitudes",
+            "value": false
+          },
+          {
+            "id": "fields",
+            "value": "lonlat,timestamp,speed"
+          },
+          {
+            "id": "format",
+            "value": "valueArray"
+          }
+        ],
+        "params": [
+          {
+            "id": "vesselId",
+            "value": ""
+          }
+        ],
+        "endpoint": "carriers-tracks",
+        "datasetId": "public-fishing-tracks:v20200507"
+      },
+      {
+        "params": [
+          {
+            "id": "vesselId",
+            "value": ""
+          }
+        ],
+        "endpoint": "carriers-vessel",
+        "datasetId": "global-vessels:v20190502"
+      }
+    ],
+    "createdAt": "2020-10-26T09:54:50.313Z",
+    "updatedAt": "2021-01-15T09:45:10.899Z"
+  }
+}

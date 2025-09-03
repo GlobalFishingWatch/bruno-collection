@@ -1,0 +1,23 @@
+meta {
+  name: Simple Search Chile
+  type: http
+  seq: 8
+}
+
+get {
+  url: {{host}}/v1/vessels/search
+  body: json
+  auth: none
+}
+
+params:query {
+  datasets: panama-vessels:v20200331
+  limit: 20
+  offset: 0
+  query: pepe
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer {{token}}
+}

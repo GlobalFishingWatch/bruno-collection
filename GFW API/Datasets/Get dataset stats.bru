@@ -1,0 +1,16 @@
+meta {
+  name: Get dataset stats
+  type: http
+  seq: 15
+}
+
+get {
+  url: {{host}}/v1/datasets/dgg_fishing_galapagos/4wings/stats/1
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer {{token}}
+}

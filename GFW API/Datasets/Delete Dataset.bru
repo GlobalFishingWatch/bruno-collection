@@ -1,0 +1,16 @@
+meta {
+  name: Delete Dataset
+  type: http
+  seq: 13
+}
+
+delete {
+  url: {{host}}/v1/datasets/eez-boundaries-shp
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer {{token}}
+}

@@ -1,0 +1,16 @@
+meta {
+  name: Get datasets
+  type: http
+  seq: 16
+}
+
+get {
+  url: {{host}}/v1/datasets?cache=false
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer {{token}}
+}

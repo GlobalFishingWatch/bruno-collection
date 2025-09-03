@@ -1,0 +1,23 @@
+meta {
+  name: PNG
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{host}}?
+  body: json
+  auth: none
+}
+
+params:query {
+  url: http://localhost:3003/
+  type: image
+  token: {{token}}
+  fileName: my-image
+}
+
+headers {
+  Content-Type: application/json
+  ~Authorization: Bearer {{token}}
+}

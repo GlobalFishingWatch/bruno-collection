@@ -1,0 +1,22 @@
+meta {
+  name: Turning tides issues
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://localhost:3003/map/api/track-corrections/default-public/1746185173728
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "messages":
+    [{"role":"user","content":"barcos fraceses en 2020 alrededor de paris"}],
+    "runId":"workspacesGoogleAgent",
+    "runtimeContext":{},
+    "threadId":"94d6ff09-0fc5-42e2-bfb1-957453e66c84",
+    "resourceId":"workspacesGoogleAgent"
+  }
+}

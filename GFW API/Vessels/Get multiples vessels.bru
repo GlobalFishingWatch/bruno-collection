@@ -1,0 +1,16 @@
+meta {
+  name: Get multiples vessels
+  type: http
+  seq: 9
+}
+
+get {
+  url: {{ host }}/v1/vessels?datasets=chile-vessels%3Av20200331%2Ctest-alias-import-vessels-pipeline%3Alatest&ids=008f07ee4-488d-7532-52de-4592564e2dcd%2C7027e42fd-db7e-74f8-38ea-4b0e6f1256da%2Cf0fa71011-15d5-3342-caab-4667e73e7c0b%2Ccce0f1823-37ee-5f70-f35b-1b57ff756c2a%2C74eb9084f-f041-ced5-8d26-a55196e7d559%2C14eb06a15-5c63-5ed0-fba3-a541eec346b5
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer {{token}}
+}

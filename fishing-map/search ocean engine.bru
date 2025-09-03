@@ -1,0 +1,16 @@
+meta {
+  name: search ocean engine
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://localhost:1337/api/fuzzy-search/search?query=es&locale=en
+  body: none
+  auth: inherit
+}
+
+params:query {
+  query: es
+  locale: en
+}

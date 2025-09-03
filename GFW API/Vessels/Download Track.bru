@@ -1,0 +1,16 @@
+meta {
+  name: Download Track
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{host}}/v1/vessels/c3fa941b5-5b06-b438-1641-132cb0e0a7c9/tracks?datasets=fishing-tracks%3Av20200507
+  body: none
+  auth: none
+}
+
+headers {
+  Authorization: Bearer {{token}}
+  : 
+}

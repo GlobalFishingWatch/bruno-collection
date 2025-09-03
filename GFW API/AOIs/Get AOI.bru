@@ -1,0 +1,16 @@
+meta {
+  name: Get AOI
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{host}}/v1/aoi
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer {{token}}
+}
