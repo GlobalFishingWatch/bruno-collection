@@ -1,0 +1,19 @@
+meta {
+  name: Autocomplete Vessels
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{host}}/{{version}}/vessels/autocomplete-term
+  body: none
+  auth: none
+}
+
+params:query {
+  datasets: public-global-fishing-vessels:latest
+  query: ANTONIO
+  ~limit: 10
+}
+
+

@@ -1,0 +1,24 @@
+meta {
+  name: Update Task
+  type: http
+  seq: 7
+}
+
+patch {
+  url: {{host}}/{{version}}/labelling-projects/:id/task/:taskId
+  body: json
+  auth: none
+}
+
+params:path {
+  id:
+  taskId:
+}
+
+
+body:json {
+  {
+    "status": "completed"
+  }
+}
+

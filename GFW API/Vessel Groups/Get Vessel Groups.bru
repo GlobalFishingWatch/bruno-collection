@@ -1,0 +1,20 @@
+meta {
+  name: Get Vessel Groups
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{host}}/{{version}}/vessel-groups
+  body: none
+  auth: none
+}
+
+params:query {
+  ~limit: 10
+  ~offset: 0
+  ~ids:
+  ~logged-user: true
+}
+
+

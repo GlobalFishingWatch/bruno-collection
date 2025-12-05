@@ -1,0 +1,27 @@
+meta {
+  name: Get Bins
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{host}}/{{version}}/4wings/bins/:z
+  body: none
+  auth: none
+}
+
+params:path {
+  z: 0
+}
+
+params:query {
+  datasets[0]: public-global-fishing-effort:latest
+  ~temporal-aggregation: true
+  ~num-bins: 10
+  ~interval: 10DAYS
+  ~filters[0]: flag in ('ESP')
+  ~date-range: 2023-01-01,2023-12-31
+  ~vessel-groups[0]:
+}
+
+

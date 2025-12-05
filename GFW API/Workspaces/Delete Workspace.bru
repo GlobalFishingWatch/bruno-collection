@@ -1,16 +1,17 @@
 meta {
   name: Delete Workspace
   type: http
-  seq: 8
+  seq: 5
 }
 
 delete {
-  url: {{host}}/v1/workspaces/from_sep_3_2019_to_dec_30_2019_near_indonesian_exclusive_economic_zone
-  body: json
+  url: {{host}}/{{version}}/workspaces/:id
+  body: none
   auth: none
 }
 
-headers {
-  Content-Type: application/json
-  Authorization: Bearer {{token}}
+params:path {
+  id:
 }
+
+

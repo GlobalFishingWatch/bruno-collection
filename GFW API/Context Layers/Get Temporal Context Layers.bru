@@ -1,0 +1,17 @@
+meta {
+  name: Get Temporal Context Layers
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{host}}/{{version}}/datasets/:dataset/temporal-context-layers
+  body: none
+  auth: none
+}
+
+params:path {
+  dataset:
+}
+
+

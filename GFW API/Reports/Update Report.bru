@@ -1,0 +1,23 @@
+meta {
+  name: Update Report
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{host}}/{{version}}/reports/:id
+  body: json
+  auth: none
+}
+
+params:path {
+  id:
+}
+
+
+body:json {
+  {
+    "name": "updated-report"
+  }
+}
+

@@ -1,0 +1,17 @@
+meta {
+  name: Get Vessel Group by ID
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{host}}/{{version}}/vessel-groups/:vesselGroupId
+  body: none
+  auth: none
+}
+
+params:path {
+  vesselGroupId:
+}
+
+

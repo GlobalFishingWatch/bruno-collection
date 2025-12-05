@@ -1,0 +1,29 @@
+meta {
+  name: Get Interaction
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{host}}/{{version}}/4wings/interaction/:z/:x/:y/:cellColumns/:cellRows
+  body: none
+  auth: none
+}
+
+params:path {
+  z: 0
+  x: 0
+  y: 0
+  cellColumns: 0,1,2
+  cellRows: 0,1,2
+}
+
+params:query {
+  datasets[0]: public-global-fishing-effort:latest
+  ~limit: 10
+  ~filters[0]: flag in ('ESP')
+  ~date-range: 2023-01-01,2023-12-31
+  ~vessel-groups[0]:
+}
+
+

@@ -1,0 +1,21 @@
+meta {
+  name: Get Events Stats
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{host}}/{{version}}/events/stats
+  body: none
+  auth: none
+}
+
+params:query {
+  datasets: public-global-fishing-events:latest
+  ~start-date: 2023-01-01
+  ~end-date: 2023-12-31
+  ~vessels:
+  ~types: FISHING
+}
+
+

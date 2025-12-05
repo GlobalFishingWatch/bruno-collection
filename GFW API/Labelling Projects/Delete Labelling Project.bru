@@ -1,0 +1,17 @@
+meta {
+  name: Delete Labelling Project
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{host}}/{{version}}/labelling-projects/:id
+  body: none
+  auth: none
+}
+
+params:path {
+  id:
+}
+
+

@@ -1,0 +1,17 @@
+meta {
+  name: Get Thumbnail
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{host}}/{{version}}/thumbnail/:id
+  body: none
+  auth: none
+}
+
+params:path {
+  id:
+}
+
+

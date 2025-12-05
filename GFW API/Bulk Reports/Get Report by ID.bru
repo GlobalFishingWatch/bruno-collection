@@ -1,0 +1,17 @@
+meta {
+  name: Get Report by ID
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{host}}/{{version}}/bulk-reports/:id
+  body: none
+  auth: none
+}
+
+params:path {
+  id:
+}
+
+

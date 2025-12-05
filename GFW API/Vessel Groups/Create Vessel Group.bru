@@ -1,0 +1,21 @@
+meta {
+  name: Create Vessel Group
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{host}}/{{version}}/vessel-groups
+  body: json
+  auth: none
+}
+
+
+body:json {
+  {
+    "name": "my-vessel-group",
+    "public": false,
+    "vessels": []
+  }
+}
+

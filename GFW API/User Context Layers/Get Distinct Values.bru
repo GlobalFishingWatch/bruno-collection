@@ -1,0 +1,17 @@
+meta {
+  name: Get Distinct Values
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{host}}/{{version}}/datasets/:dataset/user-context-layers/distinct-values
+  body: none
+  auth: none
+}
+
+params:path {
+  dataset:
+}
+
+

@@ -1,0 +1,17 @@
+meta {
+  name: Download Dataset
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{host}}/{{version}}/download/datasets/:dataset/download
+  body: none
+  auth: none
+}
+
+params:path {
+  dataset:
+}
+
+

@@ -1,0 +1,17 @@
+meta {
+  name: Delete Report
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{host}}/{{version}}/reports/:id
+  body: none
+  auth: none
+}
+
+params:path {
+  id:
+}
+
+

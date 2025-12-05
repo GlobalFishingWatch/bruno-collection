@@ -1,0 +1,17 @@
+meta {
+  name: Get User Context Layers
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{host}}/{{version}}/datasets/:dataset/user-context-layers
+  body: none
+  auth: none
+}
+
+params:path {
+  dataset:
+}
+
+

@@ -1,0 +1,20 @@
+meta {
+  name: Create Report
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{host}}/{{version}}/reports
+  body: json
+  auth: none
+}
+
+
+body:json {
+  {
+    "name": "my-report",
+    "description": "My custom report"
+  }
+}
+

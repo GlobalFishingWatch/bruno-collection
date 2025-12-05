@@ -1,16 +1,13 @@
 meta {
   name: Me
   type: http
-  seq: 4
+  seq: 1
 }
 
 get {
-  url: {{host}}/auth/me
-  body: json
+  url: {{host}}/{{version}}/auth/me
+  body: none
   auth: none
 }
 
-headers {
-  Content-Type: application/json
-  Authorization: Bearer {{token}}
-}
+

@@ -1,31 +1,24 @@
 meta {
   name: Update Dataset
   type: http
-  seq: 14
+  seq: 4
 }
 
 patch {
-  url: {{host}}/v1/datasets/peru-vessels:v20200324
+  url: {{host}}/{{version}}/datasets/:id
   body: json
   auth: none
 }
 
-headers {
-  Content-Type: application/json
-  Authorization: Bearer {{token}}
+params:path {
+  id:
 }
+
 
 body:json {
   {
-  	"fieldsAllowed": [
-      "id",
-      "flag",
-  		"origin",
-  		"fleet",
-      "shipname",
-      "nationalId",
-      "lastTransmissionDate",
-      "firstTransmissionDate"
-    ]
+    "name": "updated-dataset-name",
+    "description": "Updated description"
   }
 }
+

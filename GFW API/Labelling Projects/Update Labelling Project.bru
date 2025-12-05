@@ -1,0 +1,23 @@
+meta {
+  name: Update Labelling Project
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{host}}/{{version}}/labelling-projects/:id
+  body: json
+  auth: none
+}
+
+params:path {
+  id:
+}
+
+
+body:json {
+  {
+    "name": "updated-labelling-project"
+  }
+}
+

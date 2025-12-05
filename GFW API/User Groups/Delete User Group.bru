@@ -1,0 +1,17 @@
+meta {
+  name: Delete User Group
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{host}}/{{version}}/auth/user-groups/:id
+  body: none
+  auth: none
+}
+
+params:path {
+  id:
+}
+
+

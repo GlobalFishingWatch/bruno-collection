@@ -1,0 +1,20 @@
+meta {
+  name: Create Labelling Project
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{host}}/{{version}}/labelling-projects
+  body: json
+  auth: none
+}
+
+
+body:json {
+  {
+    "name": "my-labelling-project",
+    "description": "My labelling project"
+  }
+}
+

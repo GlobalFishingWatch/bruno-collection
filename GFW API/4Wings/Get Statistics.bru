@@ -1,0 +1,24 @@
+meta {
+  name: Get Statistics
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{host}}/{{version}}/4wings/report
+  body: none
+  auth: none
+}
+
+params:query {
+  datasets[0]: public-global-fishing-effort:latest
+  ~spatial-resolution: LOW
+  ~temporal-resolution: MONTH
+  ~group-by: FLAG
+  ~filters[0]: flag in ('ESP')
+  ~date-range: 2023-01-01,2023-12-31
+  ~region-datasets: public-eez-areas
+  ~region-ids: 8382
+}
+
+

@@ -1,0 +1,23 @@
+meta {
+  name: Update Vessel Group
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{host}}/{{version}}/vessel-groups/:vesselGroupId
+  body: json
+  auth: none
+}
+
+params:path {
+  vesselGroupId:
+}
+
+
+body:json {
+  {
+    "name": "updated-vessel-group"
+  }
+}
+

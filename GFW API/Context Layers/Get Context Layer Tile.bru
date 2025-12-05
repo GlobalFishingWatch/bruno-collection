@@ -1,0 +1,20 @@
+meta {
+  name: Get Context Layer Tile
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{host}}/{{version}}/datasets/:dataset/context-layers/:z/:x/:y
+  body: none
+  auth: none
+}
+
+params:path {
+  dataset:
+  z: 0
+  x: 0
+  y: 0
+}
+
+

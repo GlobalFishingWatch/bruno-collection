@@ -1,0 +1,17 @@
+meta {
+  name: Get Future User by ID
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{host}}/{{version}}/auth/future-users/:id
+  body: none
+  auth: none
+}
+
+params:path {
+  id:
+}
+
+

@@ -1,0 +1,29 @@
+meta {
+  name: Get Tile
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{host}}/{{version}}/4wings/tile/heatmap/:z/:x/:y
+  body: none
+  auth: none
+}
+
+params:path {
+  z: 0
+  x: 0
+  y: 0
+}
+
+params:query {
+  datasets[0]: public-global-fishing-effort:latest
+  ~temporal-aggregation: true
+  ~interval: 10DAYS
+  ~filters[0]: flag in ('ESP')
+  ~date-range: 2023-01-01,2023-12-31
+  ~vessel-groups[0]:
+  ~format: INTARRAY
+}
+
+

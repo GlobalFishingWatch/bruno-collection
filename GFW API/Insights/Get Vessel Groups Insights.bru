@@ -1,0 +1,19 @@
+meta {
+  name: Get Vessel Groups Insights
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{host}}/{{version}}/insights/vessel-groups
+  body: none
+  auth: none
+}
+
+params:query {
+  ~vesselGroupIds:
+  ~startDate: 2023-01-01
+  ~endDate: 2023-12-31
+}
+
+

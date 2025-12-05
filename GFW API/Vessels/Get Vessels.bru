@@ -1,0 +1,23 @@
+meta {
+  name: Get Vessels
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{host}}/{{version}}/vessels
+  body: none
+  auth: none
+}
+
+params:query {
+  datasets: public-global-fishing-vessels:latest
+  ids: 6583c51e3-3626-5638-866a-f47c3bc7ef7c
+  ~registries-info-data: NONE
+  ~includes: POTENTIAL_RELATED_SELF_REPORTED_INFO
+  ~binary: false
+  ~match-fields: SEVERAL_FIELDS
+  ~vessel-groups:
+}
+
+

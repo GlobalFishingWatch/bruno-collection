@@ -1,0 +1,19 @@
+meta {
+  name: Create Future User
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{host}}/{{version}}/auth/future-users
+  body: json
+  auth: none
+}
+
+
+body:json {
+  {
+    "email": "future@user.com"
+  }
+}
+

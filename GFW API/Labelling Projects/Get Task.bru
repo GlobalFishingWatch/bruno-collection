@@ -1,0 +1,17 @@
+meta {
+  name: Get Task
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{host}}/{{version}}/labelling-projects/:id/task
+  body: none
+  auth: none
+}
+
+params:path {
+  id:
+}
+
+

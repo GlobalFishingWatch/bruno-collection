@@ -1,0 +1,17 @@
+meta {
+  name: New DOI Version
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{host}}/{{version}}/datasets/:id/doi/newversion
+  body: none
+  auth: none
+}
+
+params:path {
+  id:
+}
+
+

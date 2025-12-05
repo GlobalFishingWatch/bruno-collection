@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "name": "GFW",
+  "name": "GFW API",
   "type": "collection",
   "ignore": [
     "node_modules",

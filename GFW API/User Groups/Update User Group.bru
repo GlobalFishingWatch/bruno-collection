@@ -1,0 +1,23 @@
+meta {
+  name: Update User Group
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{host}}/{{version}}/auth/user-groups/:id
+  body: json
+  auth: none
+}
+
+params:path {
+  id:
+}
+
+
+body:json {
+  {
+    "name": "updated-user-group"
+  }
+}
+

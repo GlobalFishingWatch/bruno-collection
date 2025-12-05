@@ -1,0 +1,21 @@
+meta {
+  name: Get Workspace by ID
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{host}}/{{version}}/workspaces/:id
+  body: none
+  auth: none
+}
+
+params:path {
+  id:
+}
+
+params:query {
+  ~include: dataviews,dataviews.datasets
+}
+
+

@@ -1,0 +1,19 @@
+meta {
+  name: Upload Labels
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{host}}/{{version}}/labels/uploads
+  body: json
+  auth: none
+}
+
+
+body:json {
+  {
+    "labels": []
+  }
+}
+

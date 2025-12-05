@@ -1,21 +1,24 @@
 meta {
-  name: Search vessels
+  name: Search Vessels
   type: http
-  seq: 8
+  seq: 3
 }
 
 get {
-  url: {{ host }}/v1/vessels/search
-  body: json
+  url: {{host}}/{{version}}/vessels/search
+  body: none
   auth: none
 }
 
 params:query {
-  datasets: global-vessels:v20190502,chile-vessels:v20200331,indonesia-vessels:v20200320
-  query: shipname='antonio'+AND+flag+IN+('CHL')
+  datasets: public-global-fishing-vessels:latest
+  limit: 10
+  offset: 0
+  ~query: shipname LIKE '%ANTONIO%'
+  ~where: flag='ESP'
+  ~includes: POTENTIAL_RELATED_SELF_REPORTED_INFO
+  ~registries-info-data: NONE
+  ~match-fields: SEVERAL_FIELDS
 }
 
-headers {
-  Content-Type: application/json
-  Authorization: Bearer {{token}}
-}
+

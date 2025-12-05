@@ -1,0 +1,17 @@
+meta {
+  name: Delete Vessel Group
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{host}}/{{version}}/vessel-groups/:vesselGroupId
+  body: none
+  auth: none
+}
+
+params:path {
+  vesselGroupId:
+}
+
+

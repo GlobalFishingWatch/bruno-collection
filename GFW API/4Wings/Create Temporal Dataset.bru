@@ -1,0 +1,25 @@
+meta {
+  name: Create Temporal Dataset
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{host}}/{{version}}/4wings/bq/create-temporal-dataset
+  body: json
+  auth: none
+}
+
+params:query {
+  ~dry-run: false
+}
+
+
+body:json {
+  {
+    "datasets": ["public-global-fishing-effort:latest"],
+    "startDate": "2023-01-01",
+    "endDate": "2023-12-31"
+  }
+}
+

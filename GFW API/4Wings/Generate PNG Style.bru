@@ -1,0 +1,26 @@
+meta {
+  name: Generate PNG Style
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{host}}/{{version}}/4wings/generate-png
+  body: json
+  auth: none
+}
+
+params:query {
+  datasets[0]: public-global-fishing-effort:latest
+  ~color: #361c0c
+  ~interval: 10DAYS
+  ~filters[0]: flag in ('ESP')
+  ~date-range: 2023-01-01,2023-12-31
+  ~vessel-groups[0]:
+}
+
+
+body:json {
+  {}
+}
+

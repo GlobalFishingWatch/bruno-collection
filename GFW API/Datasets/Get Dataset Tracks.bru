@@ -1,0 +1,17 @@
+meta {
+  name: Get Dataset Tracks
+  type: http
+  seq: 8
+}
+
+get {
+  url: {{host}}/{{version}}/datasets/:id/tracks
+  body: none
+  auth: none
+}
+
+params:path {
+  id:
+}
+
+

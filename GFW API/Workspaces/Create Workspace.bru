@@ -1,80 +1,32 @@
 meta {
   name: Create Workspace
   type: http
-  seq: 6
+  seq: 2
 }
 
 post {
-  url: {{host}}/v1/workspaces
+  url: {{host}}/{{version}}/workspaces
   body: json
   auth: none
 }
 
-headers {
-  Content-Type: application/json
-  Authorization: Bearer {{token}}
-}
 
 body:json {
   {
     "app": "fishing-map",
-    "name": "default",
-    "description": "",
-    "startAt": "2017-12-31T23:00:00.000Z",
-    "endAt": "2019-12-30T23:00:00.000Z",
-    "viewport": {
-      "zoom": 0,
-      "latitude": 30,
-      "longitude": -37
-    },
+    "name": "my-workspace",
+    "description": "My custom workspace",
     "public": true,
+    "startAt": "2023-01-01T00:00:00.000Z",
+    "endAt": "2023-12-31T23:59:59.999Z",
+    "viewport": {
+      "zoom": 3,
+      "latitude": 0,
+      "longitude": 0
+    },
     "state": {},
     "dataviews": [],
-    "dataviewInstances": [
-      {
-        "id": "basemap",
-        "dataviewId": 90
-      },
-      {
-        "id": "context-layer-eez",
-        "config": {
-          "color": "#069688",
-          "visible": true
-        },
-        "dataviewId": 94
-      },
-      {
-        "id": "context-layer-mpa",
-        "config": {
-          "color": "#1AFF6B",
-          "visible": false
-        },
-        "dataviewId": 98
-      },
-      {
-        "id": "context-layer-mpa-no-take",
-        "config": {
-          "color": "#F4511F",
-          "visible": false
-        },
-        "dataviewId": 99
-      },
-      {
-        "id": "context-layer-mpa-restricted",
-        "config": {
-          "color": "#F09300",
-          "visible": false
-        },
-        "dataviewId": 100
-      },
-      {
-        "id": "context-layer-rfmo",
-        "config": {
-          "color": "#6b67e5",
-          "visible": false
-        },
-        "dataviewId": 95
-      }
-    ]
+    "dataviewInstances": []
   }
 }
+

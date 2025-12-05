@@ -1,0 +1,39 @@
+meta {
+  name: Get Events
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{host}}/{{version}}/events
+  body: none
+  auth: none
+}
+
+params:query {
+  datasets: public-global-fishing-events:latest
+  limit: 10
+  offset: 0
+  ~vesselTypes: FISHING
+  ~vesselTypesOperator: INCLUDE
+  ~flags: ESP
+  ~flagsOperator: INCLUDE
+  ~vessels:
+  ~vesselGroups:
+  ~types: FISHING,PORT_VISIT
+  ~typesOperator: INCLUDE
+  ~start-date: 2023-01-01
+  ~end-date: 2023-12-31
+  ~confidences: 3,4
+  ~encounter-types: CARRIER-FISHING
+  ~gap-intentional-disabling: true
+  ~includes: id,regions.eez,type
+  ~portIds:
+  ~regionDatasets: public-eez-areas
+  ~regionIds: 8382
+  ~minDuration: 10
+  ~maxDuration: 100
+  ~include-regions: true
+}
+
+

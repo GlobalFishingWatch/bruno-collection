@@ -1,0 +1,28 @@
+meta {
+  name: Get Events with Geometry
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{host}}/{{version}}/events
+  body: json
+  auth: none
+}
+
+params:query {
+  limit: 10
+  offset: 0
+}
+
+
+body:json {
+  {
+    "datasets": ["public-global-fishing-events:latest"],
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [[[-10, 40], [10, 40], [10, 50], [-10, 50], [-10, 40]]]
+    }
+  }
+}
+

@@ -1,17 +1,12 @@
 meta {
   name: Refresh token
   type: http
-  seq: 3
+  seq: 1
 }
 
 get {
-  url: {{host}}/auth/token/reload
+  url: {{host}}/{{version}}/auth/token/reload
   body: json
   auth: none
 }
 
-headers {
-  Content-Type: application/json
-  refresh-token: {{refreshToken}}
-  ~Authorization: Bearer {{token}}
-}

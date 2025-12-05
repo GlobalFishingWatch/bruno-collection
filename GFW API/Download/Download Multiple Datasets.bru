@@ -1,0 +1,17 @@
+meta {
+  name: Download Multiple Datasets
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{host}}/{{version}}/download/datasets/:dataset/download-multiple
+  body: none
+  auth: none
+}
+
+params:path {
+  dataset:
+}
+
+

@@ -1,16 +1,22 @@
 meta {
-  name: Get dataviews
+  name: Get Dataviews
   type: http
-  seq: 7
+  seq: 1
 }
 
 get {
-  url: {{host}}/v1/dataviews?app=fishing-map&ids=
-  body: json
+  url: {{host}}/{{version}}/dataviews
+  body: none
   auth: none
 }
 
-headers {
-  Content-Type: application/json
-  Authorization: Bearer {{token}}
+params:query {
+  limit: 10
+  offset: 0
+  ~sort: -createdAt
+  ~app: fishing-map
+  ~ids:
+  ~include: datasets,datasets.endpoints
 }
+
+

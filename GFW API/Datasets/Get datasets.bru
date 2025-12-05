@@ -1,16 +1,23 @@
 meta {
-  name: Get datasets
+  name: Get Datasets
   type: http
-  seq: 16
+  seq: 1
 }
 
 get {
-  url: {{host}}/v1/datasets?cache=false
-  body: json
+  url: {{host}}/{{version}}/datasets
+  body: none
   auth: none
 }
 
-headers {
-  Content-Type: application/json
-  Authorization: Bearer {{token}}
+params:query {
+  limit: 10
+  offset: 0
+  ~sort: -createdAt
+  ~include: endpoints,configuration
+  ~ids:
+  ~logged-user: true
+  ~types:
 }
+
+

@@ -1,0 +1,17 @@
+meta {
+  name: Get Future Users
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{host}}/{{version}}/auth/future-users
+  body: none
+  auth: none
+}
+
+params:query {
+  ~user-group: 1
+}
+
+

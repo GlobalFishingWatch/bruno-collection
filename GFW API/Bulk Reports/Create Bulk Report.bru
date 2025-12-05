@@ -1,0 +1,23 @@
+meta {
+  name: Create Bulk Report
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{host}}/{{version}}/bulk-reports
+  body: json
+  auth: none
+}
+
+
+body:json {
+  {
+    "name": "My bulk report",
+    "dateRange": {
+      "start": "2023-01-01",
+      "end": "2023-12-31"
+    }
+  }
+}
+

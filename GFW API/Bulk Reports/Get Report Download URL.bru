@@ -1,0 +1,17 @@
+meta {
+  name: Get Report Download URL
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{host}}/{{version}}/bulk-reports/:id/download-file-url
+  body: none
+  auth: none
+}
+
+params:path {
+  id:
+}
+
+

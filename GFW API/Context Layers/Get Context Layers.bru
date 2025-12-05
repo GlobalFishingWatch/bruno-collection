@@ -1,0 +1,21 @@
+meta {
+  name: Get Context Layers
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{host}}/{{version}}/datasets/:dataset/context-layers
+  body: none
+  auth: none
+}
+
+params:path {
+  dataset:
+}
+
+params:query {
+  ~buffer-unit: BBOX
+}
+
+

@@ -1,0 +1,17 @@
+meta {
+  name: Publish DOI
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{host}}/{{version}}/datasets/:id/doi/publish
+  body: none
+  auth: none
+}
+
+params:path {
+  id:
+}
+
+

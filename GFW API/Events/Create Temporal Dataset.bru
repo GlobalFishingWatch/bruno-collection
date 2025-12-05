@@ -1,0 +1,21 @@
+meta {
+  name: Create Temporal Dataset
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{host}}/{{version}}/events/bq/create-temporal-dataset
+  body: json
+  auth: none
+}
+
+
+body:json {
+  {
+    "datasets": ["public-global-fishing-events:latest"],
+    "startDate": "2023-01-01",
+    "endDate": "2023-12-31"
+  }
+}
+

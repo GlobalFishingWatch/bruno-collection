@@ -1,0 +1,23 @@
+meta {
+  name: Get Events Tile
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{host}}/{{version}}/events/:z/:x/:y/tile.mvt
+  body: none
+  auth: none
+}
+
+params:path {
+  z: 0
+  x: 0
+  y: 0
+}
+
+params:query {
+  datasets: public-global-fishing-events:latest
+}
+
+

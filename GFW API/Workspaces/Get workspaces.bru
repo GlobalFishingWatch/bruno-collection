@@ -1,15 +1,23 @@
 meta {
-  name: Get workspaces
+  name: Get Workspaces
   type: http
-  seq: 7
+  seq: 1
 }
 
 get {
-  url: {{host}}/v1/workspaces?ownerId=45
+  url: {{host}}/{{version}}/workspaces
   body: none
   auth: none
 }
 
-headers {
-  Authorization: Bearer {{token}}
+params:query {
+  ~limit: 10
+  ~offset: 0
+  ~ids:
+  ~logged-user-or-gfw: true
+  ~owner-id:
+  ~app: fishing-map
+  ~include: dataviews,dataviews.datasets
 }
+
+

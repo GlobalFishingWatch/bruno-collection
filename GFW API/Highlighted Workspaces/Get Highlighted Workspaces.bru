@@ -1,0 +1,17 @@
+meta {
+  name: Get Highlighted Workspaces
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{host}}/{{version}}/highlighted-workspaces/:app
+  body: none
+  auth: none
+}
+
+params:path {
+  app: fishing-map
+}
+
+
